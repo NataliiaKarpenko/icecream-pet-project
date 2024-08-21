@@ -5,7 +5,7 @@
   "homepage": "https://NataliiaKarpenko.github.io/icecream-pet-project",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /ice-cream-pet-project/"
+    "build": "parcel build src/*.html --public-url /icecream-pet-project/"
   },
   "repository": {
     "type": "git",
