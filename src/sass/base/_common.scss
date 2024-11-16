@@ -1,0 +1,80 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  cursor: url('../images/default_cursor.svg') 16 16, auto;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.section-title {
+  font-family: 'Seymour One';
+  margin-top: 12px;
+  font-size: 30px;
+  letter-spacing: 0.04em;
+  line-height: 1.27;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 34px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    letter-spacing: 0.06em;
+  }
+}
+
+.section-subtitle {
+  font-family: 'Montserrat';
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.23;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+  }
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: url('../images/hover_cursor.svg') 16 16, auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 0;
+  cursor: url('../images/hover_cursor.svg') 16 16, auto;
+}
+
+input {
+  padding: 0;
+}

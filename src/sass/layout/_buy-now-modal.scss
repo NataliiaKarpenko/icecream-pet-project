@@ -1,0 +1,308 @@
+.buy-now__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  min-height: 100%;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity var(--transition-dur-func),
+    visibility var(--transition-dur-func);
+}
+
+.buy-now__modal {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  transition: transform var(--transition-dur-func);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 280px;
+  padding: 28px;
+
+  background-color: var(--light-font);
+  border: 2px solid var(--default-btn);
+  border-radius: 10px;
+
+  @media screen and (min-width: 768px) {
+    width: 568px;
+    padding: 32px;
+  }
+}
+
+.buy-now__title {
+  margin-bottom: 84px;
+
+  text-align: center;
+  font-family: 'Seymour One';
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--dark-font);
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 103px;
+    font-size: 20px;
+  }
+}
+
+.buy-now__list {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 84px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+.buy-now__item {
+  position: relative;
+
+  width: 132px;
+  height: 132px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+  border-radius: 15.7808px;
+
+  @media screen and (min-width: 768px) {
+    height: 135px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    z-index: 9999;
+
+    width: 131px;
+    height: 131px;
+    border-radius: 50%;
+    background-position: center;
+    box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+
+    @media screen and (min-width: 768px) {
+      top: -63px;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(-50% + 6px);
+    width: 131px;
+    height: 131px;
+    border-radius: 50%;
+
+    @media screen and (min-width: 768px) {
+      top: -56px;
+    }
+  }
+
+  &:first-of-type {
+    border: 2px solid var(--modal-green-bg);
+    &::before,
+    &::after {
+      background: linear-gradient(
+          0deg,
+          rgba(156, 190, 143, 0.7),
+          rgba(156, 190, 143, 0.7)
+        ),
+        #d9d9d9;
+    }
+    &::before {
+      content: '';
+      background-image: url('/src/images/buy-now-modal/ice-coffee.png');
+    }
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      &::before {
+        background-image: url('/src/images/buy-now-modal/ice-coffee@2x.png');
+        background-size: cover;
+      }
+    }
+
+    &::after {
+      content: '';
+      box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+    }
+  }
+
+  &:nth-of-type(2) {
+    background-color: var(--modal-yellow-bg);
+
+    &::before {
+      content: '';
+      background-image: url('/src/images/buy-now-modal/ice-coffee.png');
+    }
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      &::before {
+        background-image: url('/src/images/buy-now-modal/ice-coffee@2x.png');
+        background-size: cover;
+      }
+    }
+
+    &::after {
+      content: '';
+      box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+    }
+  }
+
+  &:nth-of-type(3) {
+    border: 2px solid var(--modal-brown-bg);
+
+    &::before,
+    &::after {
+      background: linear-gradient(
+          0deg,
+          rgba(213, 117, 63, 0.7),
+          rgba(213, 117, 63, 0.7)
+        ),
+        #d9d9d9;
+    }
+    &::before {
+      content: '';
+      background-image: url('/src/images/buy-now-modal/milkshake.png');
+    }
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      &::before {
+        background-image: url('/src/images/buy-now-modal/milkshake@2x.png');
+        background-size: cover;
+      }
+    }
+    &::after {
+      content: '';
+      box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+.buy-now__item-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--dark-font);
+}
+
+.buy-now-form__list {
+  margin-bottom: 24px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+}
+
+.buy-now-form__item {
+  position: relative;
+  width: 224px;
+
+  @media screen and (min-width: 768px) {
+    width: 368px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.buy-now-form__input {
+  width: 100%;
+  min-height: 33px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  background: var(--input-bg);
+  border-radius: 10px;
+  border: 1px solid var(--main-bg);
+  font-size: 12px;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 16px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    min-height: 42px;
+    font-size: 14px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.active + .buy-now-form__label {
+  top: -18px;
+  left: 10px;
+  opacity: 0.7;
+
+  @media screen and (min-width: 768px) {
+    top: -21px;
+    left: 13px;
+  }
+}
+
+.buy-now-form__label {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--dark-font);
+  pointer-events: none;
+  transition: all var(--transition-dur-func);
+
+  @media screen and (min-width: 768px) {
+    top: 11px;
+    left: 16px;
+    font-size: 14px;
+  }
+}
+
+.phone-lable {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  .active + & {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.phone-input::placeholder {
+  font-size: 12px;
+  color: var(--dark-font);
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.buy-now-form-text-area {
+  min-height: 84px;
+}

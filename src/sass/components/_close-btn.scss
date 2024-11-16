@@ -1,0 +1,49 @@
+%close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  stroke: var(--dark-font);
+  transition: transform var(--transition-dur-func);
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.modal-products__close-btn {
+  @extend %close-btn;
+  position: absolute;
+  top: 28px;
+  right: 20px;
+
+  @media screen and (min-width: 768px) {
+    top: 20px;
+  }
+}
+
+.mobile-menu__close-btn {
+  @extend %close-btn;
+
+  fill: var(--light-font);
+  stroke: var(--light-font);
+}
+
+.buy-now__close-btn {
+  @extend %close-btn;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  @media screen and (min-width: 768px) {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.buy-now__icon {
+  width: 20px;
+  height: 20px;
+}

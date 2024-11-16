@@ -1,0 +1,149 @@
+%button {
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+%btn-border {
+  border: 2px solid var(--default-btn);
+  &:hover,
+  &:focus {
+    border-color: var(--hover-btn);
+  }
+  &:disabled {
+    border-color: var(--disabled-btn);
+  }
+}
+
+%btn-text-size {
+  font-size: 8px;
+  line-height: 1.25;
+  letter-spacing: normal;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.28;
+  }
+}
+
+.btn-transparent {
+  @extend %button;
+  @extend%btn-border;
+  transition: border-color var(--transition-dur-func);
+}
+
+.btn-bg {
+  @extend %button;
+
+  padding: var(--btn-desktop-padding);
+  background-color: var(--default-btn);
+  border: none;
+  transition: color var(--transition-dur-func),
+    background var(--transition-dur-func);
+
+  &:hover {
+    background-color: var(--hover-btn);
+    color: var(--light-font);
+  }
+}
+
+.main-btn-text {
+  letter-spacing: normal;
+  color: var(--dark-font);
+  transition: color var(--transition-dur-func);
+  &:focus {
+    color: var(--light-font);
+  }
+}
+
+.secondary-btn-text {
+  font-weight: 600;
+  letter-spacing: normal;
+  text-decoration: underline;
+  color: var(--default-btn);
+  transition: color var(--transition-dur-func);
+  &:hover {
+    color: var(--hover-btn);
+  }
+  &:focus {
+    color: var(--light-font);
+  }
+  &:disabled {
+    color: var(--disabled-btn);
+  }
+}
+
+.buy-now-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  transition: background-color var(--transition-dur-func),
+    color var(--transition-dur-func);
+}
+
+.header__btn {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.mobile-menu__btn {
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.buy-now-btn__icon {
+  width: 12px;
+  height: 12px;
+  stroke: var(--dark-font);
+
+  transition: stroke var(--transition-dur-func);
+
+  .header__btn:hover &,
+  .mobile-menu__btn:hover & {
+    stroke: var(--light-font);
+  }
+}
+
+.hero__btn {
+  @extend%btn-text-size;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--btn-tab-padding);
+
+  @media screen and (min-width: 1200px) {
+    padding: var(--btn-desktop-padding);
+  }
+}
+
+.arrow-link .arrow-icon,
+.arrow-button .arrow-icon {
+  &:hover {
+    transform: scaleX(1.2);
+  }
+  &:focus {
+    transform: scaleX(1.2) scaleY(1.5);
+    outline: none;
+  }
+}
+
+.arrow-icon {
+  width: 40px;
+  height: 15px;
+  transform-origin: left center;
+  transition: transform var(--transition-dur-func);
+}
+
+.products-form__btn,
+.buy-now-form__btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+}

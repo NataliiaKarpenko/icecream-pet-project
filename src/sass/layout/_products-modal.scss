@@ -1,0 +1,417 @@
+.modal-products__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity var(--transition-dur-func),
+    visibility var(--transition-dur-func);
+  overflow-y: scroll;
+  z-index: 100;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-products {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  transition: transform var(--transition-dur-func);
+
+  min-height: 990px;
+  padding-top: 28px;
+  padding-bottom: 32px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: var(--light-font);
+  border: 2px solid var(--default-btn);
+  border-radius: 10px;
+
+  @media screen and (max-width: 319px) {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 280px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 568px;
+    min-height: 995px;
+    padding-top: 32px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.modal-products__title {
+  margin-bottom: 185px;
+  text-align: center;
+
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.4;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 187px;
+  }
+}
+
+.macronutrients {
+  position: relative;
+  margin-bottom: 39px;
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 48px;
+    column-gap: 20px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -163px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    z-index: 10;
+
+    content: '';
+    width: 131px;
+    height: 131px;
+
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: 768px) {
+      top: -155px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: -157px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+
+    content: '';
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+
+    @media screen and (min-width: 768px) {
+      top: -149px;
+    }
+  }
+}
+
+.icecream-macronutrients::before {
+  background-image: url('../images/products_modal/ice-cream_mob.jpg');
+  @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+    screen and (min-resolution: 192dpi) and (max-width: 767px),
+    screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    background-image: url('../images/products_modal/ice-cream_mob@2x.jpg');
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url('../images/products_modal/ice-cream_tab.jpg');
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    background-image: url('../images/products_modal/ice-cream_tab@2x.jpg');
+  }
+}
+
+.ice-coffee-macronutrients::before {
+  background-image: url('../images/products_modal/ice-coffee.jpg');
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/products_modal/ice-coffee@2x.jpg');
+  }
+}
+
+.milkshake-macronutrients::before {
+  background-image: url('../images/products_modal/milkshake.jpg');
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi) and (max-width: 767px),
+    screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    background-image: url('../images/products_modal/milkshake@2x.jpg');
+  }
+}
+
+.icecream-macronutrients::after {
+  background-image: linear-gradient(
+    0deg,
+    var(--modal-green-bg),
+    var(--modal-green-bg),
+    var(--modal-secondary-bg)
+  );
+  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+}
+
+.ice-coffee-macronutrients::after {
+  background-image: linear-gradient(
+    0deg,
+    var(--modal-yellow-bg),
+    var(--modal-yellow-bg),
+    var(--modal-secondary-bg)
+  );
+  box-shadow: 0 5.26027px 19.726px #efd478;
+}
+
+.milkshake-macronutrients::after {
+  background-image: linear-gradient(
+    0deg,
+    var(--modal-brown-bg),
+    var(--modal-brown-bg),
+    // var(--modal-secondary-bg)
+  );
+  box-shadow: 0 5.26027px 19.726px #d6936d;
+}
+
+.macronutrients__item {
+  width: 53px;
+  height: 72px;
+
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8px;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 10px;
+  line-height: 1.2;
+  color: var(--dark-font);
+
+  border-radius: 40px;
+  border: 2px solid #9cbe8f;
+
+  @media screen and (min-width: 768px) {
+    width: 65px;
+    height: 90px;
+    padding-bottom: 14px;
+    font-size: 12px;
+  }
+}
+
+.ice-cream-item {
+  border: 2px solid var(--modal-green-bg);
+}
+
+.ice-coffee-item {
+  border: 2px solid var(--modal-yellow-bg);
+}
+
+.milkshake-item {
+  border: 2px solid var(--modal-brown-bg);
+}
+
+.macronutrients__quantity {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 2.8;
+  border-radius: 50%;
+
+  @media screen and (min-width: 768px) {
+    width: 53px;
+    height: 53px;
+    font-size: 12px;
+  }
+}
+
+.icecream-quantity {
+  background: var(--modal-green-bg);
+  box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+}
+
+.ice-coffee-quantity {
+  background: var(--modal-yellow-bg);
+  box-shadow: 0px 6px 20px rgba(153, 114, 23, 0.25);
+}
+
+.milkshake-quantity {
+  background: var(--modal-brown-bg);
+  box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+}
+
+.contracted {
+  position: relative;
+}
+
+.contracted::after {
+  content: 'Prote...';
+  cursor: pointer;
+}
+
+.contracted::before {
+  content: 'Protein';
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-dur-func),
+    visibility var(--transition-dur-func);
+
+  position: absolute;
+  bottom: -250%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  padding: 4px 8px;
+  background-color: var(--disabled-btn);
+  white-space: nowrap;
+  color: var(--light-font);
+  font-size: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  @media screen and (min-width: 768px) {
+    bottom: -270%;
+    font-size: 12px;
+  }
+}
+
+.contracted:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-products__subtitle {
+  margin-bottom: 24px;
+  text-align: center;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--dark-font);
+}
+
+.ingredients {
+  margin-bottom: 48px;
+}
+
+.ingredients__item {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 14px;
+  line-height: 1.76;
+  letter-spacing: 0.04em;
+  color: var(--dark-font);
+
+  &:not(:last-child) {
+    margin-bottom: 11px;
+  }
+}
+
+.products-form__list {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.products-form__item {
+  position: relative;
+  min-height: 42px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.products-form__input {
+  width: 100%;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 10px;
+  background: var(--input-bg);
+  border-radius: 10px;
+
+  @media screen and (min-width: 768px) {
+    width: 368px;
+    padding-left: 16px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.active + .products-form__label {
+  top: -18px;
+  left: 10px;
+  opacity: 0.7;
+
+  @media screen and (min-width: 768px) {
+    left: 74px;
+  }
+}
+
+.products-form__label {
+  position: absolute;
+  top: 11px;
+  left: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--dark-font);
+  pointer-events: none;
+  transition: all var(--transition-dur-func);
+
+  @media screen and (min-width: 768px) {
+    left: 74px;
+  }
+}
+
+.phone-lable {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  .active + & {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.icecream-input {
+  border: 1px solid var(--main-bg);
+}
+
+.ice-coffee-input {
+  border: 1px solid var(--modal-yellow-bg);
+}
+
+.milkshake-input {
+  border: 1px solid var(--modal-brown-bg);
+}
+
+.phone-input::placeholder {
+  font-size: 14px;
+  color: var(--dark-font);
+}
+
+.products-form-text-area {
+  min-height: 84px;
+}

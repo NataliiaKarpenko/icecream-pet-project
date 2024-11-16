@@ -1,0 +1,20 @@
+:root {
+  --btn-desktop-padding: 12px 34px;
+  --btn-tab-padding: 5px 10px;
+
+  --main-bg: #84a178;
+  --menu-bg: #85a279;
+  --modal-green-bg: #9cbe8f;
+  --modal-yellow-bg: rgba(248, 210, 78, 0.7);
+  --modal-brown-bg: rgba(213, 117, 63, 0.7);
+  --modal-secondary-bg: #d9d9d9;
+  --input-bg: rgba(248, 210, 78, 0.1);
+
+  --dark-font: #131313;
+  --light-font: #fcfcfc;
+  --default-btn: #f8d24e;
+  --hover-btn: #0a8817;
+  --disabled-btn: #ababab;
+
+  --transition-dur-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

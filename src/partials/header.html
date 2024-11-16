@@ -1,0 +1,59 @@
+<header class="header">
+  <div class="container header__container">
+    <a href="./" class="header__logo">
+      <picture>
+        <source
+          srcset="
+            ./images/logo/logo_desktop.png    1x,
+            ./images/logo/logo_desktop@2x.png 2x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/logo/logo_tab.png    1x,
+            ./images/logo/logo_tab@2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/logo/logo_mobile.png    1x,
+            ./images/logo/logo_mobile@2x.png 2x
+          "
+          media="(max-width: 767px)"
+        />
+
+        <img
+          src="./images/logo/logo_mobile.png"
+          alt="logo"
+          class="header__logo-img"
+        />
+      </picture>
+    </a>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li><a href="#home" class="header__nav-link active-link">Home</a></li>
+        <li><a href="#products" class="header__nav-link">Our products</a></li>
+        <!-- <li><a href="" class="header__nav-link">How it's made</a></li>
+        <li><a href="" class="header__nav-link">Contact</a></li> -->
+      </ul>
+    </nav>
+    <div class="header__btn-container">
+      <button
+        type="button"
+        class="buy-now-btn btn-bg header__btn"
+        data-modal-buy-now-open
+      >
+        Buy now<svg aria-label="arrow" class="buy-now-btn__icon">
+          <use href="./images/icons.svg#btn-arrow"></use>
+        </svg>
+      </button>
+      <button class="header__burger">
+        <svg aria-label="menu" class="header__burger-icon">
+          <use href="./images/icons.svg#burger"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

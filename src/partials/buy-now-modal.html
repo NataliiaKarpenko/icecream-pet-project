@@ -1,0 +1,71 @@
+<div class="buy-now__backdrop is-hidden" data-modal-buy-now>
+  <div class="buy-now__modal">
+    <button type="button" class="buy-now__close-btn" data-modal-buy-now-close>
+      <svg
+        width="16"
+        height="16"
+        class="buy-now__icon"
+        aria-label="close button"
+      >
+        <use href="./images/icons.svg#icon-btn-close"></use>
+      </svg>
+    </button>
+    <h1 class="buy-now__title">Buy now</h1>
+    <ul class="buy-now__list">
+      <li class="buy-now__item"><p class="buy-now__item-text">Ice-cream</p></li>
+      <li class="buy-now__item">
+        <p class="buy-now__item-text">Ice-coffee</p>
+      </li>
+      <li class="buy-now__item"><p class="buy-now__item-text">Milkshake</p></li>
+    </ul>
+
+    <form id="buy-now-form">
+      <ul class="buy-now-form__list">
+        <li class="buy-now-form__item">
+          <input
+            type="text"
+            name="user-name"
+            class="buy-now-form__input"
+            autocomplete="off"
+          />
+          <label class="buy-now-form__label">Name</label>
+          <p
+            id="buy-now-form__name-error"
+            class="error-message buy-now-form__error"
+            data-type="user-name"
+          ></p>
+        </li>
+        <li class="buy-now-form__item">
+          <input
+            type="tel"
+            name="user-phone"
+            class="buy-now-form__input phone-input"
+            placeholder="+38 (___) ___ __ __"
+            autocomplete="off"
+          />
+          <label class="buy-now-form__label phone-lable">Phone</label>
+          <p
+            id="buy-now-form__phone-error"
+            class="error-message buy-now-form__error"
+            data-type="user-phone"
+          ></p>
+        </li>
+
+        <li class="buy-now-form__item">
+          <textarea
+            name="user-message"
+            class="buy-now-form__input buy-now-form-text-area"
+            autocomplete="off"
+          ></textarea>
+          <label class="buy-now-form__label">Comment</label>
+          <p
+            id="buy-now-form__text-area-error"
+            class="error-message buy-now-form__error"
+            data-type="user-message"
+          ></p>
+        </li>
+      </ul>
+      <button type="submit" class="btn-bg buy-now-form__btn">Submit</button>
+    </form>
+  </div>
+</div>
