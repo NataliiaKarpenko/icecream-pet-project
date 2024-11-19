@@ -72,7 +72,8 @@
   }
 }
 
-.buy-now-btn {
+.buy-now-btn,
+.read-more-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,4 +147,23 @@
   margin-left: auto;
   margin-right: auto;
   font-size: 14px;
+}
+
+.read-more-btn__icon {
+  width: 12px;
+  height: 12px;
+  stroke: var(--dark-font);
+
+  transition: stroke var(--transition-dur-func);
+
+  .read-more-btn:hover & {
+    stroke: var(--light-font);
+  }
+}
+
+.how-its-made-btn {
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
