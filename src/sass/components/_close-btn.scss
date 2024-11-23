@@ -31,7 +31,8 @@
   stroke: var(--light-font);
 }
 
-.buy-now__close-btn {
+.buy-now__close-btn,
+.how-its-made__close-btn {
   @extend %close-btn;
   position: absolute;
   top: 8px;
@@ -44,6 +45,8 @@
 }
 
 .buy-now__icon {
-  width: 20px;
-  height: 20px;
+  @media screen and (min-width: 768px) {
+    width: 20px;
+    height: 20px;
+  }
 }

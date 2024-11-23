@@ -32,9 +32,7 @@ const phoneErrorMessageEl = icecreamFormEl.querySelector(
 const textAreaErrorMessageEl = icecreamFormEl.querySelector(
   '#products-form__text-area-error'
 );
-const icecreamModal = document.querySelector(
-  '.modal-products__backdrop[data-modal-icecream]'
-);
+const icecreamModal = document.querySelector('.backdrop[data-modal-icecream]');
 
 const icecreamModalClose = document.querySelector(
   '.modal-products__close-btn[data-modal-icecream-close]'

@@ -33,7 +33,7 @@ const textAreaErrorMessageEl = iceCoffeeFormEl.querySelector(
   '#products-form__text-area-error'
 );
 const iceCoffeeModal = document.querySelector(
-  '.modal-products__backdrop[data-modal-ice-coffee]'
+  '.backdrop[data-modal-ice-coffee]'
 );
 
 const iceCoffeeModalClose = document.querySelector(

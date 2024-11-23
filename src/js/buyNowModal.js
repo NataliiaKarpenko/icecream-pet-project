@@ -30,9 +30,7 @@ const phoneErrorMessageEl = buyNowFormEl.querySelector(
 const textAreaErrorMessageEl = buyNowFormEl.querySelector(
   '#buy-now-form__text-area-error'
 );
-const buyNowModal = document.querySelector(
-  '.buy-now__backdrop[data-modal-buy-now]'
-);
+const buyNowModal = document.querySelector('.backdrop[data-modal-buy-now]');
 
 const buyNowModalClose = document.querySelector(
   '.buy-now__close-btn[data-modal-buy-now-close]'

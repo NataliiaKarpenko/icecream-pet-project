@@ -1,0 +1,37 @@
+.how-its-made__title {
+  margin-bottom: 20px;
+
+  text-align: center;
+  font-family: 'Seymour One';
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--dark-font);
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+    font-size: 20px;
+  }
+}
+
+.how-its-made__video {
+  margin-bottom: 20px;
+  width: 224px;
+  height: 199px;
+  border-radius: 10px;
+  object-fit: cover;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+    width: 448px;
+    height: 205px;
+  }
+}
+
+.how-its-made__text {
+  font-size: 14px;
+  line-height: 1.4;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}

@@ -34,7 +34,7 @@ const textAreaErrorMessageEl = milkShakeFormEl.querySelector(
 );
 
 const milkshakeModal = document.querySelector(
-  '.modal-products__backdrop[data-modal-milkshake]'
+  '.backdrop[data-modal-milkshake]'
 );
 
 const milkshakeModalClose = document.querySelector(

@@ -1,0 +1,55 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  min-height: 100%;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity var(--transition-dur-func),
+    visibility var(--transition-dur-func);
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  transition: transform var(--transition-dur-func);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 280px;
+  padding: 28px;
+
+  background-color: var(--light-font);
+  border: 2px solid var(--default-btn);
+  border-radius: 10px;
+
+  @media screen and (min-width: 768px) {
+    width: 568px;
+    padding: 32px;
+  }
+}
+
+.modal.buy-now__modal {
+  @media screen and (min-width: 768px) {
+    padding: 32px 54px;
+  }
+}
+
+.modal.products__modal {
+  @media screen and (min-width: 768px) {
+    padding: 32px 40px;
+  }
+}
+
+.modal.how-its-made__modal {
+  @media screen and (min-width: 768px) {
+    padding: 32px 60px;
+  }
+}

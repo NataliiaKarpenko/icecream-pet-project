@@ -9,3 +9,39 @@
     padding-top: 83px;
   }
 }
+
+.section-title {
+  font-family: 'Seymour One';
+  margin-top: 12px;
+  font-size: 30px;
+  letter-spacing: 0.04em;
+  line-height: 1.27;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 34px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    letter-spacing: 0.06em;
+  }
+}
+
+.section-subtitle {
+  font-family: 'Montserrat';
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.23;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+  }
+}

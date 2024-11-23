@@ -1,6 +1,7 @@
 @import './base/common';
 @import './base/container';
 @import './base/section';
+@import './base/is-hidden';
 @import './utils/variables';
 @import './layout/header';
 @import './layout/mobile-menu';
@@ -9,6 +10,8 @@
 @import './layout/products-modal';
 @import './layout/buy-now-modal';
 @import './layout/how-its-made';
+@import './layout/how-its-made-modal';
 @import './components/button';
 @import './components/close-btn';
 @import './components/error-message';
+@import './components/modal';
