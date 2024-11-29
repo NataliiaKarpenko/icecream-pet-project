@@ -1,7 +1,8 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+@import '~splidejs/splide/css';
 body {
-  font-family: "Montserrat", sans-serif;
-  cursor: url("../images/default_cursor.svg") 16 16, auto;
+  font-family: 'Montserrat', sans-serif;
+  cursor: url('../images/default_cursor.svg') 16 16, auto;
 }
 
 body.modal-open {
@@ -9,7 +10,7 @@ body.modal-open {
 }
 
 .section-title {
-  font-family: "Seymour One";
+  font-family: 'Seymour One';
   margin-top: 12px;
   font-size: 30px;
   letter-spacing: 0.04em;
@@ -29,7 +30,7 @@ body.modal-open {
 }
 
 .section-subtitle {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   text-align: center;
   font-size: 18px;
   font-weight: 800;
@@ -64,7 +65,7 @@ ul {
 
 a {
   text-decoration: none;
-  cursor: url("../images/hover_cursor.svg") 16 16, auto;
+  cursor: url('../images/hover_cursor.svg') 16 16, auto;
 }
 
 img {
@@ -75,7 +76,7 @@ img {
 
 button {
   padding: 0;
-  cursor: url("../images/hover_cursor.svg") 16 16, auto;
+  cursor: url('../images/hover_cursor.svg') 16 16, auto;
 }
 
 input {
@@ -345,7 +346,8 @@ input {
     line-height: 1.23;
   }
 }
-.mobile-menu__link:hover, .mobile-menu__link:focus {
+.mobile-menu__link:hover,
+.mobile-menu__link:focus {
   color: var(--dark-font);
   outline: none;
 }
@@ -358,41 +360,50 @@ input {
   position: relative;
   padding-top: 110px;
   background-color: var(--main-bg);
-  background-image: url("../images/hero/dots_mobile.png");
+  background-image: url('../images/hero/dots_mobile.png');
   background-size: auto;
   background-position: bottom;
   background-repeat: no-repeat;
 }
-@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .hero {
-    background-image: url("../images/hero/dots_mobile@2x.png");
+    background-image: url('../images/hero/dots_mobile@2x.png');
     background-size: 320px 50px;
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
     padding-top: 130px;
-    background-image: url("../images/hero/dots_tab.png");
+    background-image: url('../images/hero/dots_tab.png');
     background-size: 767.23 67.23;
     background-position: bottom;
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .hero {
-    background-image: url("../images/hero/dots_tab@2x.png");
+    background-image: url('../images/hero/dots_tab@2x.png');
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 180px;
-    background-image: url("../images/hero/dots_desktop.png");
+    background-image: url('../images/hero/dots_desktop.png');
     background-size: auto;
     background-position: bottom;
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero {
-    background-image: url("../images/hero/dots_desktop@2x.png");
+    background-image: url('../images/hero/dots_desktop@2x.png');
     background-size: 1200px 384px;
   }
 }
@@ -415,7 +426,7 @@ input {
 }
 
 .hero__title {
-  font-family: "Seymour One";
+  font-family: 'Seymour One';
   margin-bottom: 32px;
   width: 247px;
   letter-spacing: 0.04em;
@@ -436,7 +447,7 @@ input {
 }
 
 .section-title {
-  font-family: "Seymour One";
+  font-family: 'Seymour One';
   margin-top: 12px;
   font-size: 30px;
   letter-spacing: 0.04em;
@@ -642,13 +653,19 @@ input {
 
 @keyframes shadowEffect {
   0% {
-    filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0.1)); /* Very light white shadow */
+    filter: drop-shadow(
+      0 0 0px rgba(255, 255, 255, 0.1)
+    ); /* Very light white shadow */
   }
   50% {
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8)); /* Brighter white glow */
+    filter: drop-shadow(
+      0 0 20px rgba(255, 255, 255, 0.8)
+    ); /* Brighter white glow */
   }
   100% {
-    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.3)); /* Softer white glow with more blur */
+    filter: drop-shadow(
+      0 0 30px rgba(255, 255, 255, 0.3)
+    ); /* Softer white glow with more blur */
   }
 }
 .ice-cream__face {
@@ -743,29 +760,38 @@ input {
   background-repeat: no-repeat;
   background-position: center top;
 }
-@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .products {
-    background-image: url("../images/products/products-bg_mob@2x.png");
+    background-image: url('../images/products/products-bg_mob@2x.png');
   }
 }
 @media screen and (min-width: 768px) {
   .products {
-    background-image: url("../images/products/products-bg_tab.png");
+    background-image: url('../images/products/products-bg_tab.png');
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .products {
-    background-image: url("../images/products/products-bg_tab@2x.png");
+    background-image: url('../images/products/products-bg_tab@2x.png');
   }
 }
 @media screen and (min-width: 1200px) {
   .products {
-    background-image: url("../images/products/products-bg_desktop.png");
+    background-image: url('../images/products/products-bg_desktop.png');
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .products {
-    background-image: url("../images/products/products-bg_desktop@2x.png");
+    background-image: url('../images/products/products-bg_desktop@2x.png');
   }
 }
 
@@ -882,7 +908,7 @@ input {
 }
 
 .products__item::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -97px;
   left: 50%;
@@ -921,7 +947,7 @@ input {
 }
 
 .products__item::after {
-  content: "";
+  content: '';
   position: absolute;
   top: -108px;
   left: 50%;
@@ -951,59 +977,77 @@ input {
 }
 
 .products__item:nth-child(1)::after {
-  background-image: url("../images/products/ice-cream_mob.png");
+  background-image: url('../images/products/ice-cream_mob.png');
 }
-@media screen and (min-device-pixel-ratio: 2) and (max-width: 1199px), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1199px), screen and (min-resolution: 192dpi) and (max-width: 1199px), screen and (min-resolution: 2dppx) and (max-width: 1199px) {
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 1199px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1199px),
+  screen and (min-resolution: 192dpi) and (max-width: 1199px),
+  screen and (min-resolution: 2dppx) and (max-width: 1199px) {
   .products__item:nth-child(1)::after {
-    background-image: url("../images/products/ice-cream_mob@2x.png");
+    background-image: url('../images/products/ice-cream_mob@2x.png');
   }
 }
 @media screen and (min-width: 1200px) {
   .products__item:nth-child(1)::after {
-    background-image: url("../images/products/ice-cream_desktop.png");
+    background-image: url('../images/products/ice-cream_desktop.png');
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .products__item:nth-child(1)::after {
-    background-image: url("../images/products/ice-cream_desktop@2x.png");
+    background-image: url('../images/products/ice-cream_desktop@2x.png');
   }
 }
 
 .products__item:nth-child(2)::after {
-  background-image: url("../images/products/ice-coffee_mob.png");
+  background-image: url('../images/products/ice-coffee_mob.png');
 }
-@media screen and (min-device-pixel-ratio: 2) and (max-width: 1199px), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1199px), screen and (min-resolution: 192dpi) and (max-width: 1199px), screen and (min-resolution: 2dppx) and (max-width: 1199px) {
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 1199px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1199px),
+  screen and (min-resolution: 192dpi) and (max-width: 1199px),
+  screen and (min-resolution: 2dppx) and (max-width: 1199px) {
   .products__item:nth-child(2)::after {
-    background-image: url("../images/products/ice-coffee_mob@2x.png");
+    background-image: url('../images/products/ice-coffee_mob@2x.png');
   }
 }
 @media screen and (min-width: 1200px) {
   .products__item:nth-child(2)::after {
-    background-image: url("../images/products/ice-coffee_desktop.png");
+    background-image: url('../images/products/ice-coffee_desktop.png');
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .products__item:nth-child(2)::after {
-    background-image: url("../images/products/ice-coffee_desktop@2x.png");
+    background-image: url('../images/products/ice-coffee_desktop@2x.png');
   }
 }
 
 .products__item:nth-child(3)::after {
-  background-image: url("../images/products/milkshakes_mob.png");
+  background-image: url('../images/products/milkshakes_mob.png');
 }
-@media screen and (min-device-pixel-ratio: 2) and (max-width: 1199px), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1199px), screen and (min-resolution: 192dpi) and (max-width: 1199px), screen and (min-resolution: 2dppx) and (max-width: 1199px) {
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 1199px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1199px),
+  screen and (min-resolution: 192dpi) and (max-width: 1199px),
+  screen and (min-resolution: 2dppx) and (max-width: 1199px) {
   .products__item:nth-child(3)::after {
-    background-image: url("../images/products/milkshakes_mob@2x.png");
+    background-image: url('../images/products/milkshakes_mob@2x.png');
   }
 }
 @media screen and (min-width: 1200px) {
   .products__item:nth-child(3)::after {
-    background-image: url("../images/products/milkshakes_desktop.png");
+    background-image: url('../images/products/milkshakes_desktop.png');
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .products__item:nth-child(3)::after {
-    background-image: url("../images/products/milkshakes_desktop@2x.png");
+    background-image: url('../images/products/milkshakes_desktop@2x.png');
   }
 }
 
@@ -1014,7 +1058,8 @@ input {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity var(--transition-dur-func), visibility var(--transition-dur-func);
+  transition: opacity var(--transition-dur-func),
+    visibility var(--transition-dur-func);
   overflow-y: scroll;
   z-index: 100;
 }
@@ -1064,7 +1109,7 @@ input {
 .modal-products__title {
   margin-bottom: 185px;
   text-align: center;
-  font-family: "Seymour One";
+  font-family: 'Seymour One';
   font-style: normal;
   font-size: 20px;
   line-height: 1.4;
@@ -1081,13 +1126,13 @@ input {
   display: flex;
   justify-content: center;
   -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
 }
 @media screen and (min-width: 768px) {
   .macronutrients {
     margin-bottom: 48px;
     -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
   }
 }
 .macronutrients::before {
@@ -1097,7 +1142,7 @@ input {
   transform: translateX(-50%);
   display: block;
   z-index: 10;
-  content: "";
+  content: '';
   width: 131px;
   height: 131px;
   border-radius: 50%;
@@ -1116,7 +1161,7 @@ input {
   left: 50%;
   transform: translateX(-50%);
   display: block;
-  content: "";
+  content: '';
   width: 132px;
   height: 132px;
   border-radius: 50%;
@@ -1128,54 +1173,80 @@ input {
 }
 
 .icecream-macronutrients::before {
-  background-image: url("../images/products_modal/ice-cream_mob.jpg");
+  background-image: url('../images/products_modal/ice-cream_mob.jpg');
 }
-@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .icecream-macronutrients::before {
-    background-image: url("../images/products_modal/ice-cream_mob@2x.jpg");
+    background-image: url('../images/products_modal/ice-cream_mob@2x.jpg');
   }
 }
 @media screen and (min-width: 768px) {
   .icecream-macronutrients::before {
-    background-image: url("../images/products_modal/ice-cream_tab.jpg");
+    background-image: url('../images/products_modal/ice-cream_tab.jpg');
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .icecream-macronutrients::before {
-    background-image: url("../images/products_modal/ice-cream_tab@2x.jpg");
+    background-image: url('../images/products_modal/ice-cream_tab@2x.jpg');
   }
 }
 
 .ice-coffee-macronutrients::before {
-  background-image: url("../images/products_modal/ice-coffee.jpg");
+  background-image: url('../images/products_modal/ice-coffee.jpg');
 }
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
   .ice-coffee-macronutrients::before {
-    background-image: url("../images/products_modal/ice-coffee@2x.jpg");
+    background-image: url('../images/products_modal/ice-coffee@2x.jpg');
   }
 }
 
 .milkshake-macronutrients::before {
-  background-image: url("../images/products_modal/milkshake.jpg");
+  background-image: url('../images/products_modal/milkshake.jpg');
 }
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .milkshake-macronutrients::before {
-    background-image: url("../images/products_modal/milkshake@2x.jpg");
+    background-image: url('../images/products_modal/milkshake@2x.jpg');
   }
 }
 
 .icecream-macronutrients::after {
-  background-image: linear-gradient(0deg, var(--modal-green-bg), var(--modal-green-bg), var(--modal-secondary-bg));
+  background-image: linear-gradient(
+    0deg,
+    var(--modal-green-bg),
+    var(--modal-green-bg),
+    var(--modal-secondary-bg)
+  );
   box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
 }
 
 .ice-coffee-macronutrients::after {
-  background-image: linear-gradient(0deg, var(--modal-yellow-bg), var(--modal-yellow-bg), var(--modal-secondary-bg));
+  background-image: linear-gradient(
+    0deg,
+    var(--modal-yellow-bg),
+    var(--modal-yellow-bg),
+    var(--modal-secondary-bg)
+  );
   box-shadow: 0 5.26027px 19.726px #efd478;
 }
 
 .milkshake-macronutrients::after {
-  background-image: linear-gradient(0deg, var(--modal-brown-bg), var(--modal-brown-bg));
+  background-image: linear-gradient(
+    0deg,
+    var(--modal-brown-bg),
+    var(--modal-brown-bg)
+  );
   box-shadow: 0 5.26027px 19.726px #d6936d;
 }
 
@@ -1253,15 +1324,16 @@ input {
 }
 
 .contracted::after {
-  content: "Prote...";
+  content: 'Prote...';
   cursor: pointer;
 }
 
 .contracted::before {
-  content: "Protein";
+  content: 'Protein';
   opacity: 0;
   visibility: hidden;
-  transition: opacity var(--transition-dur-func), visibility var(--transition-dur-func);
+  transition: opacity var(--transition-dur-func),
+    visibility var(--transition-dur-func);
   position: absolute;
   bottom: -250%;
   left: 50%;
@@ -1413,7 +1485,8 @@ input {
   min-height: 100%;
   overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity var(--transition-dur-func), visibility var(--transition-dur-func);
+  transition: opacity var(--transition-dur-func),
+    visibility var(--transition-dur-func);
 }
 
 .buy-now__modal {
@@ -1435,7 +1508,7 @@ input {
 .buy-now__title {
   margin-bottom: 84px;
   text-align: center;
-  font-family: "Seymour One";
+  font-family: 'Seymour One';
   font-size: 16px;
   line-height: 1.5;
   color: var(--dark-font);
@@ -1462,7 +1535,7 @@ input {
   border-radius: 15.7808px;
 }
 .buy-now__item::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -50%;
   z-index: 9999;
@@ -1473,7 +1546,7 @@ input {
   box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
 }
 .buy-now__item::after {
-  content: "";
+  content: '';
   position: absolute;
   top: calc(-50% + 6px);
   width: 131px;
@@ -1483,58 +1556,79 @@ input {
 .buy-now__item:first-of-type {
   border: 2px solid var(--modal-green-bg);
 }
-.buy-now__item:first-of-type::before, .buy-now__item:first-of-type::after {
-  background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #d9d9d9;
+.buy-now__item:first-of-type::before,
+.buy-now__item:first-of-type::after {
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
 }
 .buy-now__item:first-of-type::before {
-  content: "";
-  background-image: url("/src/images/buy-now-modal/ice-coffee.png");
+  content: '';
+  background-image: url('/src/images/buy-now-modal/ice-coffee.png');
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .buy-now__item:first-of-type::before {
-    background-image: url("/src/images/buy-now-modal/ice-coffee@2x.png");
+    background-image: url('/src/images/buy-now-modal/ice-coffee@2x.png');
     background-size: cover;
   }
 }
 .buy-now__item:first-of-type::after {
-  content: "";
+  content: '';
   box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
 }
 .buy-now__item:nth-of-type(2) {
   background-color: var(--modal-yellow-bg);
 }
 .buy-now__item:nth-of-type(2)::before {
-  content: "";
-  background-image: url("/src/images/buy-now-modal/ice-coffee.png");
+  content: '';
+  background-image: url('/src/images/buy-now-modal/ice-coffee.png');
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .buy-now__item:nth-of-type(2)::before {
-    background-image: url("/src/images/buy-now-modal/ice-coffee@2x.png");
+    background-image: url('/src/images/buy-now-modal/ice-coffee@2x.png');
     background-size: cover;
   }
 }
 .buy-now__item:nth-of-type(2)::after {
-  content: "";
+  content: '';
   box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
 }
 .buy-now__item:nth-of-type(3) {
   border: 2px solid var(--modal-brown-bg);
 }
-.buy-now__item:nth-of-type(3)::before, .buy-now__item:nth-of-type(3)::after {
-  background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #d9d9d9;
+.buy-now__item:nth-of-type(3)::before,
+.buy-now__item:nth-of-type(3)::after {
+  background: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
 }
 .buy-now__item:nth-of-type(3)::before {
-  content: "";
-  background-image: url("/src/images/buy-now-modal/milkshake.png");
+  content: '';
+  background-image: url('/src/images/buy-now-modal/milkshake.png');
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .buy-now__item:nth-of-type(3)::before {
-    background-image: url("/src/images/buy-now-modal/milkshake@2x.png");
+    background-image: url('/src/images/buy-now-modal/milkshake@2x.png');
     background-size: cover;
   }
 }
 .buy-now__item:nth-of-type(3)::after {
-  content: "";
+  content: '';
   box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
 }
 
@@ -1567,7 +1661,8 @@ input {
   font-size: 12px;
   line-height: 1.4;
 }
-.buy-now__input, .buy-now__input::placeholder {
+.buy-now__input,
+.buy-now__input::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.4;
@@ -1613,7 +1708,8 @@ textarea.buy-now__input {
   .buy-now__input::-moz-placeholder {
     font-size: 14px;
   }
-  .buy-now__input, .buy-now__input::placeholder {
+  .buy-now__input,
+  .buy-now__input::placeholder {
     font-size: 14px;
   }
   textarea.buy-now__input {
@@ -1628,7 +1724,8 @@ textarea.buy-now__input {
   pointer-events: none;
 }
 
-.btn-bg, .btn-transparent {
+.btn-bg,
+.btn-transparent {
   border-radius: 10px;
   font-weight: 600;
 }
@@ -1636,7 +1733,8 @@ textarea.buy-now__input {
 .btn-transparent {
   border: 2px solid var(--default-btn);
 }
-.btn-transparent:hover, .btn-transparent:focus {
+.btn-transparent:hover,
+.btn-transparent:focus {
   border-color: var(--hover-btn);
 }
 .btn-transparent:disabled {
@@ -1663,7 +1761,8 @@ textarea.buy-now__input {
   padding: var(--btn-desktop-padding);
   background-color: var(--default-btn);
   border: none;
-  transition: color var(--transition-dur-func), background var(--transition-dur-func);
+  transition: color var(--transition-dur-func),
+    background var(--transition-dur-func);
 }
 .btn-bg:hover {
   background-color: var(--hover-btn);
@@ -1702,7 +1801,8 @@ textarea.buy-now__input {
   align-items: center;
   gap: 8px;
   font-size: 14px;
-  transition: background-color var(--transition-dur-func), color var(--transition-dur-func);
+  transition: background-color var(--transition-dur-func),
+    color var(--transition-dur-func);
 }
 
 @media screen and (max-width: 767px) {
@@ -1727,7 +1827,8 @@ textarea.buy-now__input {
   stroke: var(--dark-font);
   transition: stroke var(--transition-dur-func);
 }
-.header__btn:hover .buy-now-btn__icon, .mobile-menu__btn:hover .buy-now-btn__icon {
+.header__btn:hover .buy-now-btn__icon,
+.mobile-menu__btn:hover .buy-now-btn__icon {
   stroke: var(--light-font);
 }
 
@@ -1767,7 +1868,9 @@ textarea.buy-now__input {
   font-size: 14px;
 }
 
-.buy-now__close-btn, .mobile-menu__close-btn, .modal-products__close-btn {
+.buy-now__close-btn,
+.mobile-menu__close-btn,
+.modal-products__close-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1777,7 +1880,9 @@ textarea.buy-now__input {
   stroke: var(--dark-font);
   transition: transform var(--transition-dur-func);
 }
-.buy-now__close-btn:hover, .mobile-menu__close-btn:hover, .modal-products__close-btn:hover {
+.buy-now__close-btn:hover,
+.mobile-menu__close-btn:hover,
+.modal-products__close-btn:hover {
   transform: scale(1.2);
 }
 
@@ -1820,4 +1925,4 @@ textarea.buy-now__input {
   .error-message {
     left: 74px;
   }
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
