@@ -28,6 +28,7 @@
 .btn-transparent {
   @extend %button;
   @extend%btn-border;
+  background-color: transparent;
   transition: border-color var(--transition-dur-func);
 }
 
@@ -41,6 +42,10 @@
     background var(--transition-dur-func);
 
   &:hover {
+    background-color: var(--hover-btn);
+  }
+
+  &:focus {
     background-color: var(--hover-btn);
     color: var(--light-font);
   }
@@ -79,6 +84,7 @@
   align-items: center;
   gap: 8px;
   font-size: 14px;
+  line-height: 1.33;
   transition: background-color var(--transition-dur-func),
     color var(--transition-dur-func);
 }
@@ -105,8 +111,20 @@
 
   transition: stroke var(--transition-dur-func);
 
-  .header__btn:hover &,
-  .mobile-menu__btn:hover & {
+  .header__btn:focus &,
+  .mobile-menu__btn:focus & {
+    stroke: var(--light-font);
+  }
+}
+
+.read-more-btn__icon {
+  width: 12px;
+  height: 12px;
+  stroke: var(--dark-font);
+
+  transition: stroke var(--transition-dur-func);
+
+  .read-more-btn:focus & {
     stroke: var(--light-font);
   }
 }
@@ -124,7 +142,7 @@
 }
 
 .arrow-link .arrow-icon,
-.arrow-button .arrow-icon {
+.arrow-button {
   &:hover {
     transform: scaleX(1.2);
   }
@@ -149,21 +167,28 @@
   font-size: 14px;
 }
 
-.read-more-btn__icon {
-  width: 12px;
-  height: 12px;
-  stroke: var(--dark-font);
-
-  transition: stroke var(--transition-dur-func);
-
-  .read-more-btn:hover & {
-    stroke: var(--light-font);
-  }
-}
-
 .how-its-made-btn {
   @media screen and (max-width: 767px) {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+.contacts-btn {
+  min-width: 196px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.franchise-btn {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.33;
+
+  @media screen and (min-width: 1200px) {
+    padding: var(--btn-desktop-padding);
   }
 }

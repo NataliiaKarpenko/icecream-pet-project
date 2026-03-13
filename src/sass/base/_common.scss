@@ -2,7 +2,9 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  cursor: url('../images/default_cursor.svg') 16 16, auto;
+  cursor:
+    url('../images/default_cursor.svg') 16 16,
+    auto;
 }
 
 body.modal-open {
@@ -12,7 +14,8 @@ body.modal-open {
 h1,
 h2,
 h3,
-p {
+p,
+address {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -25,7 +28,9 @@ ul {
 
 a {
   text-decoration: none;
-  cursor: url('../images/hover_cursor.svg') 10 10, auto;
+  cursor:
+    url('../images/hover_cursor.svg') 10 10,
+    auto;
 }
 
 img {
@@ -36,7 +41,9 @@ img {
 
 button {
   padding: 0;
-  cursor: url('../images/hover_cursor.svg') 16 16, auto;
+  cursor:
+    url('../images/hover_cursor.svg') 16 16,
+    auto;
 }
 
 input {

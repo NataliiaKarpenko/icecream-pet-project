@@ -14,7 +14,7 @@ const howItsMadeOpen = document.querySelector(
   '.how-its-made-btn[data-modal-how-its-made-open]'
 );
 
-const videoPlayer = document.querySelector('.how-its-made__video');
+const videoPlayer = document.querySelector('.how-its-made-modal__video');
 
 howItsMadeClose.addEventListener('click', () => {
   toggleModal(howItsMadeModal);

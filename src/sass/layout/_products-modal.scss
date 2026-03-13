@@ -257,6 +257,7 @@
 
 .ingredients {
   margin-bottom: 48px;
+  width: 100%;
 }
 
 .ingredients__item {
@@ -309,10 +310,6 @@
   top: -18px;
   left: 10px;
   opacity: 0.7;
-
-  @media screen and (min-width: 768px) {
-    left: 74px;
-  }
 }
 
 .products-form__label {
@@ -324,10 +321,6 @@
   color: var(--dark-font);
   pointer-events: none;
   transition: all var(--transition-dur-func);
-
-  @media screen and (min-width: 768px) {
-    left: 74px;
-  }
 }
 
 .phone-lable {
