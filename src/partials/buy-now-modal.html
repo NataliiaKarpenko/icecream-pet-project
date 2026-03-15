@@ -1,6 +1,6 @@
-<div class="backdrop is-hidden" data-modal-buy-now>
+<div class="backdrop is-hidden" data-modal="buy-now">
   <div class="modal buy-now__modal">
-    <button type="button" class="buy-now__close-btn" data-modal-buy-now-close>
+    <button type="button" class="buy-now__close-btn" data-modal-close="buy-now">
       <svg
         width="16"
         height="16"
@@ -19,7 +19,7 @@
       <li class="buy-now__item"><p class="buy-now__item-text">Milkshake</p></li>
     </ul>
 
-    <form id="buy-now-form">
+    <form class="form">
       <ul class="buy-now-form__list">
         <li class="buy-now-form__item">
           <input
@@ -30,7 +30,6 @@
           />
           <label class="buy-now-form__label">Name</label>
           <p
-            id="buy-now-form__name-error"
             class="error-message buy-now-form__error"
             data-type="user-name"
           ></p>
@@ -45,7 +44,6 @@
           />
           <label class="buy-now-form__label phone-lable">Phone</label>
           <p
-            id="buy-now-form__phone-error"
             class="error-message buy-now-form__error"
             data-type="user-phone"
           ></p>
@@ -59,7 +57,6 @@
           ></textarea>
           <label class="buy-now-form__label">Comment</label>
           <p
-            id="buy-now-form__text-area-error"
             class="error-message buy-now-form__error"
             data-type="user-message"
           ></p>

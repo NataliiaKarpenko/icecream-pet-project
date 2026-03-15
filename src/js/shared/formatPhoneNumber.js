@@ -1,4 +1,8 @@
-export function formatPhoneNumber(event) {
+import { modals } from './toggleModal';
+
+// console.log(error);
+
+function formatPhoneNumber(event) {
   let input = event.target;
   let inputValue = input.value.replace(/\D/g, ''); // Remove non-numeric characters
 
@@ -26,3 +30,11 @@ export function formatPhoneNumber(event) {
   // Update the input value without resetting or repeating the country code
   input.value = formattedValue;
 }
+
+modals.forEach(modal => {
+  if (!modal.classList.contains('no-form-backdrop')) {
+    const form = modal.querySelector('.form');
+    const phoneInput = form.elements['user-phone'];
+    phoneInput.addEventListener('input', e => formatPhoneNumber(e));
+  }
+});

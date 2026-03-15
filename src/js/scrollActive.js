@@ -10,7 +10,7 @@ window.addEventListener('resize', getHeaderHeight);
 
 function getHeaderHeight() {
   const headerHeight = header.offsetHeight;
-  console.log(headerHeight);
+
   return headerHeight;
 }
 

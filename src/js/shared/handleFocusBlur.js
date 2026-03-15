@@ -1,27 +1,43 @@
-function handleStyleChange(input, borderOnFocus, borderOnBlur) {
+import { modals } from './toggleModal';
+
+function handleStyleChange(input) {
+  const borderOnFocus = '2px';
+  const borderOnBlur = '1px';
+
   const isActive = input.value !== '' || input === document.activeElement;
   input.classList.toggle('active', isActive);
-  // input.style.borderWidth = input === document.activeElement ? '2px ' : '1px ';
-  input.style.border =
+  input.style.borderWidth =
     input === document.activeElement ? borderOnFocus : borderOnBlur;
 }
 
-export function handleBlur(event, borderOnFocus, borderOnBlur) {
+function handleBlur(event) {
   const input = event.target;
-  handleStyleChange(input, borderOnFocus, borderOnBlur);
+  handleStyleChange(input);
 }
 
-export function handleFocus(
-  event,
-  errorMessagesEls,
-  borderOnFocus,
-  borderOnBlur
-) {
+function handleFocus(event, errorMessages) {
   const input = event.target;
-  handleStyleChange(input, borderOnFocus, borderOnBlur);
-  errorMessagesEls.forEach(errorMessage => {
+  handleStyleChange(input);
+
+  errorMessages.forEach(errorMessage => {
     if (input.name === errorMessage.dataset.type) {
       errorMessage.style.display = 'none';
+      input.style.borderColor = '';
     }
   });
 }
+
+modals.forEach(modal => {
+  if (!modal.classList.contains('no-form-backdrop')) {
+    const form = modal.querySelector('.form');
+    const inputs = form.querySelectorAll('[name]');
+    const errorMessages = form.querySelectorAll('.error-message');
+    inputs.forEach(input => {
+      input.addEventListener('blur', e => handleBlur(e));
+
+      input.addEventListener('focus', e => {
+        handleFocus(e, errorMessages);
+      });
+    });
+  }
+});

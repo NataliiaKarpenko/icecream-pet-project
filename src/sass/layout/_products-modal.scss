@@ -126,8 +126,7 @@
   background-image: linear-gradient(
     0deg,
     var(--modal-brown-bg),
-    var(--modal-brown-bg),
-    // var(--modal-secondary-bg)
+    var(--modal-brown-bg) // var(--modal-secondary-bg)
   );
   box-shadow: 0 5.26027px 19.726px #d6936d;
 }
@@ -217,7 +216,8 @@
   content: 'Protein';
   opacity: 0;
   visibility: hidden;
-  transition: opacity var(--transition-dur-func),
+  transition:
+    opacity var(--transition-dur-func),
     visibility var(--transition-dur-func);
 
   position: absolute;

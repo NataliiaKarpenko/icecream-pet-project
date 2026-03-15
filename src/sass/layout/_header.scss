@@ -1,9 +1,12 @@
 .header {
   z-index: 20;
-  position: fixed;
+  position: sticky;
+  top: 0;
+  left: 0;
   padding-top: 12px;
   padding-bottom: 10px;
   width: 100%;
+  min-width: 0;
 
   background-color: var(--main-bg);
 
@@ -23,6 +26,7 @@
 
 .header__logo {
   transition: transform var(--transition-dur-func);
+  min-width: 0;
   &:hover {
     transform: scale(1.2);
   }

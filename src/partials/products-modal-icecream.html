@@ -1,9 +1,9 @@
-<div class="backdrop is-hidden" data-modal-icecream>
+<div class="backdrop is-hidden" data-modal="icecream">
   <div class="modal products__modal">
     <button
       type="button"
       class="modal-products__close-btn"
-      data-modal-icecream-close
+      data-modal-close="icecream"
     >
       <svg width="20" height="20" aria-label="close button">
         <use href="./images/icons.svg#icon-btn-close"></use>
@@ -21,7 +21,7 @@
       </li>
       <li class="macronutrients__item icecream-item">
         <p class="macronutrients__quantity icecream-quantity">8,2g</p>
-        <p class="macronutrients__name">Fats</p>
+        <p>Fats</p>
       </li>
       <li class="macronutrients__item icecream-item">
         <p class="macronutrients__quantity icecream-quantity">40,4g</p>
@@ -44,7 +44,7 @@
         <span>Vanilla sugar</span><span>10g</span>
       </li>
     </ul>
-    <form id="icecream-form" class="products-form">
+    <form class="form products-form">
       <ul class="products-form__list">
         <li class="products-form__item">
           <input
@@ -54,11 +54,7 @@
             autocomplete="off"
           />
           <label class="products-form__label">Name</label>
-          <p
-            id="products-form__name-error"
-            class="error-message products-form__error"
-            data-type="user-name"
-          ></p>
+          <p class="error-message" data-type="user-name"></p>
         </li>
         <li class="products-form__item">
           <input
@@ -69,11 +65,7 @@
             autocomplete="off"
           />
           <label class="products-form__label phone-lable">Phone</label>
-          <p
-            id="products-form__phone-error"
-            class="error-message products-form__error"
-            data-type="user-phone"
-          ></p>
+          <p class="error-message" data-type="user-phone"></p>
         </li>
 
         <li class="products-form__item">
@@ -83,11 +75,7 @@
             autocomplete="off"
           ></textarea>
           <label class="products-form__label">Comment</label>
-          <p
-            id="products-form__text-area-error"
-            class="error-message products-form__error"
-            data-type="user-message"
-          ></p>
+          <p class="error-message" data-type="user-message"></p>
         </li>
       </ul>
       <button type="submit" class="btn-bg products-form__btn">Submit</button>

@@ -1,7 +1,38 @@
 import { Notify } from 'notiflix';
 import { validateName, validatePhone, validateTextArea } from './validateInput';
-import { validateName, validatePhone, validateTextArea } from './validateInput';
 import { toggleModal } from './toggleModal';
+import { modals } from './toggleModal';
+
+const forms = document.querySelectorAll('.form');
+
+modals.forEach(modal => {
+  if (!modal.classList.contains('no-form-backdrop')) {
+    const form = modal.querySelector('.form');
+    const nameInput = form.elements['user-name'];
+    const phoneInput = form.elements['user-phone'];
+    const textAreaInput = form.elements['user-message'];
+
+    const nameErrorMessage = form.querySelector('[data-type="user-name"]');
+    const phoneErrorMessage = form.querySelector('[data-type="user-phone"]');
+    const textAreaErrorMessage = form.querySelector(
+      '[data-type="user-message"]'
+    );
+
+    form.addEventListener('submit', e =>
+      onSubmit(
+        e,
+        nameInput,
+        phoneInput,
+        textAreaInput,
+        nameErrorMessage,
+        phoneErrorMessage,
+        textAreaErrorMessage,
+        modal,
+        form
+      )
+    );
+  }
+});
 
 export function onSubmit(
   e,
