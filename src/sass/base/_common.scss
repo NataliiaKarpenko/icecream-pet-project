@@ -31,6 +31,9 @@ a {
   cursor:
     url('../images/hover_cursor.svg') 10 10,
     auto;
+  &:visited {
+    color: inherit;
+  }
 }
 
 img {
