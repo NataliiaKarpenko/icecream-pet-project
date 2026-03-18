@@ -38,7 +38,8 @@
   padding: var(--btn-desktop-padding);
   background-color: var(--default-btn);
   border: none;
-  transition: color var(--transition-dur-func),
+  transition:
+    color var(--transition-dur-func),
     background var(--transition-dur-func);
 
   &:hover {
@@ -85,7 +86,8 @@
   gap: 8px;
   font-size: 14px;
   line-height: 1.33;
-  transition: background-color var(--transition-dur-func),
+  transition:
+    background-color var(--transition-dur-func),
     color var(--transition-dur-func);
 }
 
@@ -160,11 +162,16 @@
 }
 
 .products-form__btn,
-.buy-now-form__btn {
+.buy-now-form__btn,
+.our-location_btn {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  font-size: 14px;
+  font-size: 12px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .how-its-made-btn {

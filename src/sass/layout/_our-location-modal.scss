@@ -1,4 +1,4 @@
-.how-its-made__title {
+.our-location__title {
   margin-bottom: 20px;
 
   text-align: center;
@@ -13,25 +13,14 @@
   }
 }
 
-.how-its-made-modal__video {
-  margin-bottom: 20px;
-  width: 224px;
-  height: 199px;
-  border-radius: 10px;
-  object-fit: cover;
+.our-location__map {
+  margin-bottom: 24px;
+  width: 224;
+  height: 199;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 32px;
     width: 448px;
     height: 205px;
-  }
-}
-
-.how-its-made-modal__text {
-  font-size: 14px;
-  line-height: 1.4;
-
-  @media screen and (min-width: 768px) {
-    font-size: 16px;
   }
 }

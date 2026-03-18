@@ -32,9 +32,7 @@ function formatPhoneNumber(event) {
 }
 
 modals.forEach(modal => {
-  if (!modal.classList.contains('no-form-backdrop')) {
-    const form = modal.querySelector('.form');
-    const phoneInput = form.elements['user-phone'];
-    phoneInput.addEventListener('input', e => formatPhoneNumber(e));
-  }
+  const form = modal.querySelector('.form');
+  const phoneInput = form?.elements['user-phone'];
+  phoneInput?.addEventListener('input', e => formatPhoneNumber(e));
 });

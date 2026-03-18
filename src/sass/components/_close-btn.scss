@@ -32,7 +32,8 @@
 }
 
 .buy-now__close-btn,
-.how-its-made__close-btn {
+.how-its-made__close-btn,
+.our-location__close-btn {
   @extend %close-btn;
   position: absolute;
   top: 8px;

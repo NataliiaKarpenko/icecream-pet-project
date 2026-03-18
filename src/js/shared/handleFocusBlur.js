@@ -28,16 +28,14 @@ function handleFocus(event, errorMessages) {
 }
 
 modals.forEach(modal => {
-  if (!modal.classList.contains('no-form-backdrop')) {
-    const form = modal.querySelector('.form');
-    const inputs = form.querySelectorAll('[name]');
-    const errorMessages = form.querySelectorAll('.error-message');
-    inputs.forEach(input => {
-      input.addEventListener('blur', e => handleBlur(e));
+  const form = modal.querySelector('.form');
+  const inputs = form?.querySelectorAll('[name]');
+  const errorMessages = form?.querySelectorAll('.error-message');
+  inputs?.forEach(input => {
+    input.addEventListener('blur', e => handleBlur(e));
 
-      input.addEventListener('focus', e => {
-        handleFocus(e, errorMessages);
-      });
+    input.addEventListener('focus', e => {
+      handleFocus(e, errorMessages);
     });
-  }
+  });
 });
